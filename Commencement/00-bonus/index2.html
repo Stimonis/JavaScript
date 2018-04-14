@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+  </head>
+  <body>
+
+    <img onmouseover="changerImage(this);" onmouseout="remettreImage(this);" src="image1.jpg" id="image1" />
+
+  </body>
+
+  <!-- Pour cette exo il faut que quand on passe sur l'image, elle se change -->
+
+  <script type="text/javascript">
+
+    // ex 1
+
+    function changerImage(n) {
+      document.getElementById("image1").src = "image1_2.jpg"
+    }
+    function remettreImage(n) {
+      document.getElementById("image1").src = "image1.jpg"
+    }
+
+    changerImage();
+    remettreImage();
+
+
+  </script>
+</html>

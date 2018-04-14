@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // ex 1
+
+    let character = {
+      name : "Stimonis",
+      age : 36,
+      items_to_give : ["potion", "arme", "habit", "argent"],
+      giveItem : () => {
+        let nbreItem = Math.floor(Math.random() * character.items_to_give.length);
+        console.log(character.items_to_give[nbreItem]);
+      },
+    };
+
+    for (item in character) {
+      console.log(character[item]);
+    }
+
+    character.giveItem();
+
+    // ex 2
+
+    let objetAVendre = [{
+      title : "épée",
+      physic : 15,
+      magic : 2,
+      minLevel : 1,
+      available : true,
+    },
+    {
+      title : "arc à flèche",
+      physic : 10,
+      magic : 4,
+      minLevel : 3,
+      available : true,
+    },
+    {
+      title : "bouclier",
+      physic : 0,
+      magic : 0,
+      minLevel : 1,
+      available : true,
+    },
+    {
+      title : "sceptre",
+      physic : 10,
+      magic : 15,
+      minLevel : 10,
+      available : false,
+    },
+    ]
+
+    let afficherObjet = () => {
+      for (item in objetAVendre) {
+        console.log(objetAVendre[item]);
+      }
+    };
+
+    let objetDispo = () => {
+      for (let i=0; i<objetAVendre.length; i++) {
+        if (objetAVendre[i]["available"] === true) {
+          console.log("cet objet est en stock : " + objetAVendre[i]["title"]);
+        }
+      }
+    };
+
+    let niveauMin = () => {
+      for (let i=0; i<objetAVendre.length; i++) {
+        if (objetAVendre[i]['minLevel'] >= 10) {
+          console.log("cet objet peut s'utiliser à partir du Level 10  : " + objetAVendre[i]['title']);
+        }
+      }
+    }
+
+
+    afficherObjet();
+    objetDispo();
+    niveauMin();
+
+    // ex 3
+
+    let mainCharacter = {
+      name : "Stimonis",
+      level : 58,
+      life : 1500,
+      weapon : {
+        name : "épée flamboyante",
+        damage : 488,
+      },
+      attack : () => {
+        return mainCharacter.name + " attaque avec " + mainCharacter.weapon.name + ", les dégats sont de " + (mainCharacter.level * mainCharacter.weapon.damage) + "xp";
+      }
+    }
+
+    console.log(mainCharacter.attack());
+  </script>
+
+
+
+</body>
+</html>

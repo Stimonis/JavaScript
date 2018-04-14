@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>05 array</title>
+</head>
+<body>
+
+    <script>
+
+    // Exercice : addition
+    // crée un tableau qui contient les valeurs suivantes : 1, 2, 3, 4, 5, 6, 7, 8, 9
+    // faire une boucle qui permet d'additioner toutes ces valeurs
+
+      let nombre = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let resultat = 0;
+
+      for (let i=0; i < nombre.length; i++) {
+        resultat = resultat + nombre[i];
+      }
+      console.log(resultat);
+
+
+      let sum = [1, 2, 3, 4, 5, 6, 7, 8, 9].reduce((a,b) => a+b, 2);
+      console.log(sum);;
+
+
+      // Exercice : Vos meilleurs choix
+      // crée un tableau qui contetient 3 nom d'acteurs
+      // Pour chaque acteur, afficher dans la console par exemple : "Le numero 1 est Stalone"
+      // Bonus:transformer en : "Le premier est Stalone", Le deuxième est Cruiz", etc...
+
+      let name = ["Spacey", "Stalone", "Bacon"];
+      for (i=0; i < name.length; i++) {
+        if (i===0) {
+          console.log("Le premier est " + name[i]);
+        } else if (i===1) {
+          console.log("Le deuxième est " + name[i]);
+        } else {
+          console.log("Le troisième est " + name[i]);
+        }
+        // console.log("Le numéro " + (i+1) + " est " + name[i]);
+      }
+
+
+
+      // Exercice : clone
+      // crée un tableau qui contetient les valeurs suivantes : "Mario", "Luigi", "Peach"
+      // dupliquer le tableau et y ajouter "Bowser"
+
+      let nomperso = ["Mario", "Luigi", "Peach"];
+
+      let nomperso2 = [...nomperso];
+      nomperso2.push("Bowser");
+
+      console.log(nomperso);
+      console.log(nomperso2);
+
+
+    </script>
+
+
+</body>
+</html>

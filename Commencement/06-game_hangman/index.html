@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>06 hangman</title>
+</head>
+<body>
+
+  <script>
+
+    let lettres = ["B", "O", "N", "J", "O","U","R"];
+    let lettresChoisies = ["_ ", "_ ", "_ ", "_ ", "_ ","_ ", "_ "];
+    let compteur = 0;
+
+    function guessLetter () {
+      let closeArret = true;
+      while (lettres.toString() !== lettresChoisies.toString()) {
+        let choix = String(prompt("Choisis une lettre").toUpperCase());
+        compteur++;
+        if (lettres.includes(choix)) {
+          for (let i=0; i<lettres.length; i++) {
+            if (choix === lettres[i]) {
+              lettresChoisies[i] = choix;
+              console.log(lettresChoisies);
+            }
+          }
+        } else {
+            console.log("cette lettre ne se trouve pas dans le mot.")
+          }
+      }
+    }
+
+    guessLetter();
+    console.log("Bravo, tu as réussi à trouver le mot " + lettres + " en " +  compteur + " tentatives.")
+
+
+    // .includes !!!! à utiliser
+
+
+
+
+  </script>
+
+</body>
+</html>

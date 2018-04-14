@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+  // Exercice : Pair et impair
+  // Ecrivez une boucle qui va itérer de 0 à 20.
+  // Pour chaque itération , il va vérifier si le nombre actuel est pair ou impair
+  // afficher dans la console par exemple : " 2 est pair "
+
+  for (i=0; i<21; i++) {
+    if (i%2 === 0) {
+      console.log(i + " est pair");
+    } else {
+      console.log(i + " est impair");
+    }
+  }
+
+
+  // Exercice : Multiplication Tables
+  // Écrire une boucle qui va itérer de 0 à 10
+  // Pour chaque itération de la boucle, il va multiplier le nombre de 9
+  // afficher dans la console le résultat par exemple : " 2 * 9 = 18".
+
+for (i=0; i<11; i++) {
+  console.log(i * 9);
+}
+
+
+  // Exercice : assigner des grades
+  // Écrire une boucle qui va itérer de 0 à 100
+  // Écrire une fonction qui va retourner des grades selon les scores reçu
+  // si le score au dessus de 90 le grade est A
+  // si le score au dessus de 80 le grade est B
+  // si le score au dessus de 70 le grade est C
+  // si le score au dessus de 65 le grade est D
+  // si le score n'entre pas dans ces catégories le grade est F
+  // afficher dans la console le résultat par exemple : "Pour 82 points vous avez le grade B".
+
+  let grade;
+
+  for (i=0; i<100; i++) {
+    if (i >= 90) {
+      grade = "A";
+    } else if (i >= 80 && i <= 90) {
+      grade = "B"
+    } else if (i >= 70 && i < 80) {
+      grade = "C";
+    } else if (i >= 65 && i< 70) {
+      grade = "D";
+    } else {
+      grade = "F"
+    }
+    console.log(grade);
+  }
+
+
+  // Exercice : pyramide
+  // Écrire une boucle qui va dessiner dans la console (ligne par ligne) le résulat suivant
+
+  let star = "*"
+  for (i=1; i<6; i++) {
+    console.log(star);
+    star = star + "*";
+  }
+
+  // manière différente pour le dernier exo
+  // while (star.length<100) {
+  //   console.log(star);
+  //   star = star + "*";
+  // }
+
+
+  </script>
+
+</body>
+</html>

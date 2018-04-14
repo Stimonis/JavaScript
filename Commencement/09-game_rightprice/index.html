@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>09 game rightprice</title>
+  </head>
+
+  <body>
+
+    <script>
+
+      let essais = 0;                                                                // compteur pour le nombre de tentative
+      let min = 20;
+      let max = 80;
+
+      let nbreAleatoire = () => {                                                    // fonction pour créer un nombre aléatoire
+        let nbreADecouvrir = Math.floor(Math.random() * (max - min + 1) + min);
+        return nbreADecouvrir;
+      }
+      let nbre = nbreAleatoire();
+      // console.log(nbre);
+
+      let rightprice = () => {                                                       // fonction pour le jeu du juste prix
+        let choix = prompt("Choisis un chiffre entre " + min + " et " + max);
+        essais ++;
+        if ( choix !== null) {
+          if ( choix < min || choix > max ) {
+            alert("j'ai dit entre " + min + " et " + max);
+            rightprice();
+          }
+           else if ( choix > nbre ) {
+            alert("C'est moins");
+            rightprice();
+          } else if ( choix < nbre ) {
+            alert("C'est plus");
+            rightprice();
+          } else {
+            alert("Bravo, tu as trouvé en " + essais + " tentatives");
+          }
+        }
+      }
+
+      rightprice();
+
+
+
+
+    </script>
+
+
+  </body>
+
+
+</html>

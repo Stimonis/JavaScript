@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  let mot =(prompt("Encodez un mot pour avoir des informations sur lui:"));
+  let mot2 = mot.split("");
+
+
+  for ( i=0; i<mot.length; i++ ) {
+    if ( mot2[i] === "a" ) {
+      mot2[i] = 4;
+    } else if ( mot2[i] === "b" ) {
+      mot2[i] = 8;
+    } else if ( mot2[i] === "e" ) {
+      mot2[i] = 8;
+    } else {
+      mot2[i] = mot2[i];
+    }
+  }
+
+  mot = mot2.toString();
+  console.log(mot2.join(''));
+
+
+
+
+
+  </script>
+</body>
+</html>

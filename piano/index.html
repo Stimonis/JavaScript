@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <title>piano</title>
+  <style>
+    .red {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="piano">
+
+    <ul class="octave1">
+
+      <li class="blanche" id="n1erDo"> <span class="visibleIn">Do <br>(C)</span> <span class="visibleOut"> A </span> </li>
+      <li class="noire" id="1erDo_"> <span class="visibleIn">Do# <br>(C#)</span> <span class="visibleOut"> 2 </span> </li>
+      <li class="blanche re" id="1erRe"> <span class="visibleIn">Ré <br>(D)</span> <span class="visibleOut"> Z </span> </li>
+      <li class="noire" id="1erRe_"> <span class="visibleIn">Ré# <br>(D#)</span> <span class="visibleOut"> 3 </span> </li>
+      <li class="blanche mi" id="1erMi"> <span class="visibleIn">Mi <br>(E)</span> <span class="visibleOut"> E </span> </li>
+      <li class="blanche" id="1erFa"> <span class="visibleIn">Fa <br>(F)</span> <span class="visibleOut"> R </span> </li>
+      <li class="noire" id="1erFa_"> <span class="visibleIn">Fa# <br> (F#)</span> <span class="visibleOut"> 5 </span> </li>
+      <li class="blanche sol" id="1erSol"> <span class="visibleIn">Sol <br>(G)</span><span class="visibleOut"> T </span> </li>
+      <li class="noire" id="1erSol_"> <span class="visibleIn">Sol# <br>(G#)</span> <span class="visibleOut"> 6 </span> </li>
+      <li class="blanche la" id="1erLa"> <span class="visibleIn">La <br>(A)</span> <span class="visibleOut"> Y </span> </li>
+      <li class="noire" id="1erLa_"> <span class="visibleIn">La# <br>(A#)</span> <span class="visibleOut"> 7 </span> </li>
+      <li class="blanche si" id="1erSi"> <span class="visibleIn">Si <br>(B)</span> <span class="visibleOut"> U </span> </li>
+    </ul>
+
+    <ul class="octave2">
+      <li class="blanche" id="2emeDo"> <span class="visibleIn">Do <br>(C)</span> <span class="visibleOut"> C </span> </li>
+      <li class="noire" id="2emeDo_"> <span class="visibleIn">Do# <br>(C#)</span> <span class="visibleOut"> F </span> </li>
+      <li class="blanche re" id="2emeRe"> <span class="visibleIn">Ré <br>(D)</span> <span class="visibleOut"> V </span> </li>
+      <li class="noire" id="2emeRe_"> <span class="visibleIn">Ré# <br>(D#)</span> <span class="visibleOut"> G </span> </li>
+      <li class="blanche mi" id="2emeMi"> <span class="visibleIn">Mi <br>(E)</span> <span class="visibleOut"> B </span> </li>
+      <li class="blanche" id="2emeFa"> <span class="visibleIn">Fa <br>(F)</span> <span class="visibleOut"> N </span> </li>
+      <li class="noire" id="2emeFa_"> <span class="visibleIn">Fa# <br> (F#)</span> <span class="visibleOut"> J </span> </li>
+      <li class="blanche sol" id="2emeSol"> <span class="visibleIn">Sol <br>(G)</span><span class="visibleOut"> , </span> </li>
+      <li class="noire" id="2emeSol_"> <span class="visibleIn">Sol# <br>(G#)</span> <span class="visibleOut"> K </span> </li>
+      <li class="blanche la" id="2emeLa"> <span class="visibleIn">La <br>(A)</span> <span class="visibleOut"> ; </span> </li>
+      <li class="noire" id="2emeLa_"> <span class="visibleIn">La# <br>(A#)</span> <span class="visibleOut"> L </span> </li>
+      <li class="blanche si" id="2emeSi"> <span class="visibleIn">Si <br>(B)</span> <span class="visibleOut"> : </span> </li>
+    </ul>
+
+    <!-- <ul class="octave3">
+      <li class="blanche do"> <span class="visibleIn">Do <br>(C)</span> <span class="visibleOut"> V </span> </li>
+      <li class="noire do#"> <span class="visibleIn">Do# <br>(C#)</span> <span class="visibleOut"> G </span> </li>
+      <li class="blanche re"> <span class="visibleIn">Ré <br>(D)</span> <span class="visibleOut"> B </span> </li>
+      <li class="noire re#"> <span class="visibleIn">Ré# <br>(D#)</span> <span class="visibleOut"> H </span> </li>
+      <li class="blanche mi"> <span class="visibleIn">Mi <br>(E)</span> <span class="visibleOut"> N </span> </li>
+      <li class="blanche fa"> <span class="visibleIn">Fa <br>(F)</span> <span class="visibleOut"> ? </span> </li>
+      <li class="noire fa#"> <span class="visibleIn">Fa# <br> (F#)</span> <span class="visibleOut"> K </span> </li>
+      <li class="blanche sol"> <span class="visibleIn">Sol <br>(G)</span><span class="visibleOut"> ; </span> </li>
+      <li class="noire sol#"> <span class="visibleIn">Sol# <br>(G#)</span> <span class="visibleOut"> L </span> </li>
+      <li class="blanche la"> <span class="visibleIn">La <br>(A)</span> <span class="visibleOut"> : </span> </li>
+      <li class="noire la#"> <span class="visibleIn">La# <br>(A#)</span> <span class="visibleOut"> M </span> </li>
+      <li class="blanche si"> <span class="visibleIn">Si <br>(B)</span> <span class="visibleOut"> = </span> </li>
+    </ul> -->
+
+  </div>
+
+  <div class="boutons">
+
+    <button type="button" name="button" id="enregistrement">Enregistrement</button>
+    <div class="espace"></div>
+    <button type="button" name="button" id="stop">Stop</button>
+    <div class="espace"></div>
+    <button type="button" name="button" id="play">Play</button>
+    <div class="espace"></div>
+    <!-- <button type="button" name="button" id="boucle"><i class="fas fa-redo"></i></button> -->
+    <!-- <div class="espace"></div> -->
+    <button type="button" name="button" id="reset">Reset</button>
+
+
+
+
+  </div>
+
+  <audio src="./Notes/First_Octave/Do_FirstOct.mp3" id="1OctDo"></audio>
+  <audio src="./Notes/First_Octave/Do_Di_FirstOct.mp3" id="1OctDo_"></audio>
+  <audio src="./Notes/First_Octave/Re_FirstOct.mp3" id="1OctRe"></audio>
+  <audio src="./Notes/First_Octave/Re_Di_FirstOct.mp3" id="1OctRe_"></audio>
+  <audio src="./Notes/First_Octave/Mi_FirstOct.mp3" id="1OctMi"></audio>
+  <audio src="./Notes/First_Octave/Fa_FirstOct.mp3" id="1OctFa"></audio>
+  <audio src="./Notes/First_Octave/Fa_Di_FirstOct.mp3" id="1OctFa_"></audio>
+  <audio src="./Notes/First_Octave/Sol_FirstOct.mp3" id="1OctSol"></audio>
+  <audio src="./Notes/First_Octave/Sol_Di_FirstOct.mp3" id="1OctSol_"></audio>
+  <audio src="./Notes/First_Octave/La_FirstOct.mp3" id="1OctLa"></audio>
+  <audio src="./Notes/First_Octave/La_Di_FirstOct.mp3" id="1OctLa_"></audio>
+  <audio src="./Notes/First_Octave/Si_FirstOct.mp3" id="1OctSi"></audio>
+
+  <audio src="./Notes/Second_Octave/Do_SecOct.mp3" id="2OctDo"></audio>
+  <audio src="./Notes/Second_Octave/Do_Di_SecOct.mp3" id="2OctDo_"></audio>
+  <audio src="./Notes/Second_Octave/Re_SecOct.mp3" id="2OctRe"></audio>
+  <audio src="./Notes/Second_Octave/Re_Di_SecOct.mp3" id="2OctRe_"></audio>
+  <audio src="./Notes/Second_Octave/Mi_SecOct.mp3" id="2OctMi"></audio>
+  <audio src="./Notes/Second_Octave/Fa_SecOct.mp3" id="2OctFa"></audio>
+  <audio src="./Notes/Second_Octave/Fa_Di_SecOct.mp3" id="2OctFa_"></audio>
+  <audio src="./Notes/Second_Octave/Sol_SecOct.mp3" id="2OctSol"></audio>
+  <audio src="./Notes/Second_Octave/Sol_Di_SecOct.mp3" id="2OctSol_"></audio>
+  <audio src="./Notes/Second_Octave/La_SecOct.mp3" id="2OctLa"></audio>
+  <audio src="./Notes/Second_Octave/La_Di_SecOct.mp3" id="2OctLa_"></audio>
+  <audio src="./Notes/Second_Octave/Si_SecOct.mp3" id="2OctSi"></audio>
+
+  <audio src="./Notes/Third_Octave/Do_ThirdOct.mp3" id="2OctDo"></audio>
+  <audio src="./Notes/Third_Octave/Do_Di_ThirdOct.mp3" id="2OctDo_"></audio>
+  <audio src="./Notes/Third_Octave/Re_ThirdOct.mp3" id="2OctRe"></audio>
+  <audio src="./Notes/Third_Octave/Re_Di_ThirdOct.mp3" id="2OctRe_"></audio>
+  <audio src="./Notes/Third_Octave/Mi_ThirdOct.mp3" id="2OctMi"></audio>
+  <audio src="./Notes/Third_Octave/Fa_ThirdOct.mp3" id="2OctFa"></audio>
+  <audio src="./Notes/Third_Octave/Fa_Di_ThirdOct.mp3" id="2OctFa_"></audio>
+  <audio src="./Notes/Third_Octave/Sol_ThirdOct.mp3" id="2OctSol"></audio>
+  <audio src="./Notes/Third_Octave/Sol_Di_ThirdOct.mp3" id="2OctSol_"></audio>
+  <audio src="./Notes/Third_Octave/La_ThirdOct.mp3" id="2OctLa"></audio>
+  <audio src="./Notes/Third_Octave/La_Di_ThirdOct.mp3" id="2OctLa_"></audio>
+  <audio src="./Notes/Third_Octave/Si_ThirdOct.mp3" id="2OctSi"></audio>
+
+  <script type="text/javascript" src="jquery-2.2.4.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+
+</body>
+</html>
