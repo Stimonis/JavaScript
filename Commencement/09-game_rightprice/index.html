@@ -35,7 +35,13 @@
             alert("C'est plus");
             rightprice();
           } else {
-            alert("Bravo, tu as trouvé en " + essais + " tentatives");
+            alert("Bravo, tu as trouvé en " + essais + " tentatives);
+            let message = confirm("On recommence?");
+            if (message === true) {
+                counter = 0;
+                nbre = nbreRandom();
+                rightPrice();
+            }      
           }
         }
       }
